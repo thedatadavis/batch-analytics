@@ -1,15 +1,11 @@
-Welcome to your new dbt project!
+# Batch Analytics dbt Project
 
-### Using the starter project
+### Commands
+Default: use the env variable to point to the correct profile
+- The project builds via the makefile
 
-Try running the following commands:
-- dbt run
-- dbt test
+Build with local profile:
+`dbt build --profiles-dir dbt_profile.yml`
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Run with local profile:
+`dbt run --profiles-dir dbt_profile.yml`

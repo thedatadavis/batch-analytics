@@ -1,0 +1,22 @@
+order_id,party_id,user_id,experience_id,is_exception,exception_type,exception_reason,is_excluded,adjusted_column,adjusted_value,adjustment_reason
+757399781537,edef47c0-ef4e-11e9-abe7-d9070212d72f,dd26c54b-11f3-4202-a52e-1c47bdd360ed,1572adc40b301d98e71533016e8e59d3,1,date_order,placed date too far from start date,1,,,
+149878800439,bb35b430-410d-11e9-afd5-8f92c9b92140,,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+149888991287,bb35b430-410d-11e9-afd5-8f92c9b92140,,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+151936434231,bb35b430-410d-11e9-afd5-8f92c9b92140,6a9b0ccd-597a-44c4-b0ac-ab9713deaaff,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+153257312311,a6577da0-6c3c-11e9-aa03-79f51646b112,321d26a8-60d8-46df-afd5-fa8a4f18c717,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+153647022135,a6577da0-6c3c-11e9-aa03-79f51646b112,321d26a8-60d8-46df-afd5-fa8a4f18c717,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+154218987575,a6577da0-6c3c-11e9-aa03-79f51646b112,321d26a8-60d8-46df-afd5-fa8a4f18c717,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+154577797175,a6577da0-6c3c-11e9-aa03-79f51646b112,321d26a8-60d8-46df-afd5-fa8a4f18c717,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+160128008247,a6577da0-6c3c-11e9-aa03-79f51646b112,321d26a8-60d8-46df-afd5-fa8a4f18c717,3a27ca0291b0bc59b3a6fcb5b15a39e4,1,test_record,dummy data,1,,,
+531450658955,bbe60d30-bea8-11e9-9947-2361d57b0c1c,8d30af34-9595-4bdb-9cb7-9b6a4211d793,4b36443ae2c58b649516f8d4af296c97,1,same_day,start is same day as order,0,,,
+840043004065,f26230c0-17a7-11ea-8cee-57784e13dc8e,b96df078-1d19-437e-b59c-83d3cefa2439,548f995a0fa3f66f275e810357d76477,1,date_order,possible data entry error,0,start_at,2021-04-19 01:30:00 UTC,change start year to match placed year
+875847090337,aa273d90-a776-11eb-a756-178e93c8d172,b54666e9-1a3f-472d-a8c7-9bb8dd319251,7ba419c95ce92e3795bc4f0256b24147,1,date_order,possible data lag,0,placed_at,2021-08-25 22:23:19 UTC,change placed day to match start day
+877460652193,e8766340-ee71-11eb-a6a6-bb405be9a6b1,3d0bd6bc-5c74-49a5-a8a1-4737d49b5d43,7ba419c95ce92e3795bc4f0256b24147,1,same_day,start is same day as order,0,,,
+171696848951,8a228990-a47c-11e9-b463-1bf45da752eb,dcccef2f-acfb-4ea6-83b7-8626ac689468,7c3d2ed7b4058746dd98d42627d04d7f,1,date_order,possible data lag,0,placed_at,2019-08-09 14:22:11 UTC,change placed day to match start day
+862ba0ab-b166-4fb4-8d0c-78a090be530b,5edb45f0-34e0-11ec-ab09-3b891b2eec77,ca94ee0c-9da6-4aef-8ef3-fa46a6ea2703,953e73551a09a24cebb3b1c37b3dfbe8,1,same_day,start is same day as order,0,,,
+844249563297,125d08d0-0976-11eb-9b01-718202375302,a70e501f-07a4-4ba0-9699-7b418bc91693,a8882be139e8faa6516847d27e941580,1,same_day,start is same day as order,0,,,
+840043856033,f26230c0-17a7-11ea-8cee-57784e13dc8e,b96df078-1d19-437e-b59c-83d3cefa2439,c6fe9ed9c9297cf1483a7ceb6b75fe0c,1,date_order,possible data entry error,0,start_at,2021-04-18 14:30:00 UTC,change start year to match placed year
+861099786401,eaf5ca70-c2e8-11eb-b668-2728df960717,524e00a6-3120-40fd-9d0a-b3f2813a6a69,cc173c26730df7105eb7e9f6401a8b4a,1,same_day,start is same day as order,0,,,
+531968327819,7fa195c0-eeb8-11e9-8f63-fd6c247f904c,dd26c54b-11f3-4202-a52e-1c47bdd360ed,dfdee9797eaa89ed156c68a9281827b7,1,date_order,placed date too far from start date,1,,,
+870358876321,07532eb0-ceb0-11eb-9138-11318ac2f610,9978ec50-fafb-44ed-98f5-5b7a70c784ec,dfdee9797eaa89ed156c68a9281827b7,1,same_day,start is same day as order,0,,,
+878635942049,b4a43700-7a08-11eb-ba37-3d3f75d19274,722e4b46-679a-444a-a478-d0594da59c9a,e10d51508ad81f3e96d220949e0b61f4,1,same_day,start is same day as order,0,,,

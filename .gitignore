@@ -1,4 +1,7 @@
-## dbt
+# vs code
+.vscode/
+
+# dbt
 target/
 dbt_packages/
 logs/

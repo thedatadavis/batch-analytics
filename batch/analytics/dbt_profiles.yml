@@ -1,0 +1,9 @@
+batch_analytics:
+  outputs:
+    build:
+      type: duckdb
+      schema: analytics
+      path: ./data/batch.duckdb
+      threads: 4
+
+  target: build
