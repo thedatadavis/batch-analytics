@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: imports
+    database: batch.duckdb
+    schema: manual_imports
+    description: Source data to seed the database
+    loaded_at_field: _loaded_at
+
+    tables:
+      - name: orders
+        description: Base data from the orders table in BigQuery
+
+      - name: regions
+        description: Geographical labels from Wikipedia
+
+      - name: exceptions
+        description: Exceptions to the order data
+
+models:
+  - name: src_orders
+    description: Base data from orders import
+    
+  - name: src_regions
+    description: Base data from regions import
+
+  - name: src_exceptions
+    description: Base data from exceptions import

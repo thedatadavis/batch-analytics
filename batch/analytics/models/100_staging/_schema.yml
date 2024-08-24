@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Prep orders columns
+
+    columns:
+      - name: order_id
+        description: Order ID
+
+      - name: party_id
+        description: > 
+            ID of party associated with the experience
+            - A party can have one or more users who completed a transaction
+            - A party can have multiple experiences
+
+      - name: user_id
+        description: >
+            ID of user who ordered the experience
+            - There is one user per order record
+            - A single user can have multiple orders (multiple experiences) for a single party
+            - Alternatively, several users may exist for one or more experience orders
+
+      - name: placed_at
+        description: Date and time when the experience was placed
+
+      - name: placed_date
+        description: Date when the experience was placed
+
+      - name: start_at
+        description: Date and time when the experience started
+
+      - name: start_date
+        description: Date when the experience started
+
+      - name: gross_revenue
+
+      - name: experience_category
+
+      - name: experience_subcategory
+
+      - name: experience_hash
+        description: > 
+            Supplied hash of category, subcategory, and location
+            - Various quality issues required generating a separate surrogate key and hash
+
+      - name: experience_hash_hex
+        description: Experience hash cast as a hex string
+
+      - name: experience_surrogate_key
+        description: >
+            Concatentation of city, category, and location
+            Example: "loc-sacramento-ca-xc-day-drinking-nightlife-xs-breweries-wineries"
+
+      - name: experience_id
+        description: Hash of surrogate key cast as a hex string
+
+      - name: city
+        description: Site of the experience; extracted city name from "city, state"
+
+      - name: state_code
+        description: Site of the experience; extracted state name from "city, state"
+
+      - name: state_name
+        description: Full name of the state
+
+      - name: region
+        description: Mapping of state to region grouping

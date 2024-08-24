@@ -34,6 +34,7 @@ con.execute('CREATE SCHEMA analytics')
 # Create a new table
 for tbl in file_imports:
     con.execute(f'CREATE TABLE manual_imports.{tbl[1]} AS SELECT * FROM "{os.path.join(data_dir, tbl[0])}"')
+    print(f'Created table {tbl[1]}')
 
 # Close the connection
 con.close()
