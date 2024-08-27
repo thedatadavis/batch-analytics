@@ -33,15 +33,17 @@ with orders as (
             , '-xs-'
             , ifnull(experience_subcategory,'no-exp-sub')
          ))) as experience_id
+        
+        , o.city as order_city
 
         , case 
             when o.city like '%Boston%' then 'Boston'
-            else split_part(o.city, ', ', 0)
-          end as city
+            else split_part(o.city, ', ', 1)
+          end as city_name
         
         , case 
             when o.city like '%Boston%' then 'MA'
-            else split_part(o.city, ', ', 1)
+            else split_part(o.city, ', ', 2)
           end as state_code
 
     from {{ ref('src_orders') }} as o
