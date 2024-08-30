@@ -45,6 +45,26 @@ with orders as (
 )
 
 , order_summary as (
+
+    select
+        o.placed_date
+        , 'overall' as location_level
+        , 'overall' as location
+        , sum(o.gross_revenue) as revenue
+        , count(*) as orders
+        , sum(po.party_revenue) as party_revenue
+        , count(distinct o.party_id) as parties
+        , sum(po.party_order_count) as party_orders
+
+    from orders as o
+    left join party_orders po
+        on o.party_id = po.party_id
+        and o.placed_date = po.party_order_start
+
+    group by o.placed_date
+
+    union all
+
     select
         o.placed_date
         , 'region' as location_level
@@ -55,7 +75,7 @@ with orders as (
         , count(distinct o.party_id) as parties
         , sum(po.party_order_count) as party_orders
 
-    from orders o
+    from orders as o
     left join party_orders po
         on o.party_id = po.party_id
         and o.placed_date = po.party_order_start
@@ -74,7 +94,7 @@ with orders as (
         , count(distinct o.party_id) as parties
         , sum(po.party_order_count) as party_orders
 
-    from orders o
+    from orders as o
     left join party_orders po
         on o.party_id = po.party_id
         and o.placed_date = po.party_order_start
@@ -93,7 +113,7 @@ with orders as (
         , count(distinct o.party_id) as parties
         , sum(po.party_order_count) as party_orders
 
-    from orders o
+    from orders as o
     left join party_orders po
         on o.party_id = po.party_id
         and o.placed_date = po.party_order_start
@@ -112,7 +132,7 @@ with orders as (
         , count(distinct o.party_id) as parties
         , sum(po.party_order_count) as party_orders
 
-    from orders o
+    from orders as o
     left join party_orders po
         on o.party_id = po.party_id
         and o.placed_date = po.party_order_start
@@ -138,6 +158,19 @@ with orders as (
 )
 
 , experience_availability as (
+
+    select distinct
+        'overall' as location_level
+        , 'overall' as location
+        , experience_id
+        , min(placed_date) as experience_available_date
+
+    from orders
+
+    group by experience_id
+
+    union all
+
     select distinct
         'region' as location_level
         , region as location
