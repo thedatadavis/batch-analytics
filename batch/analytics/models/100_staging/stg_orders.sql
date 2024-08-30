@@ -34,7 +34,10 @@ with orders as (
             , ifnull(experience_subcategory,'no-exp-sub')
          ))) as experience_id
         
-        , o.city as order_city
+        , case
+            when o.city like '%Boston%' then 'Boston, MA'
+            else o.city 
+          end as order_city
 
         , case 
             when o.city like '%Boston%' then 'Boston'
@@ -67,7 +70,9 @@ final as (
     select
         orders.*
         , region_lookup.* exclude(state_abbr)
-        , exception_lookup.* exclude(order_id, party_id, user_id, experience_id)
+        , exception_lookup.* exclude(order_id, party_id, user_id, experience_id, is_exception, is_excluded)
+        , coalesce(is_exception, 0) as is_exception
+        , coalesce(is_excluded, 0) as is_excluded
     
     from orders
     left join region_lookup
