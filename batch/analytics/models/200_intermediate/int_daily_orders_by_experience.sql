@@ -7,7 +7,7 @@ with orders as (
         {{ ref('stg_orders') }}
 
     where
-        is_exception is null
+        is_excluded is false
 )
 
 , party_orders as (

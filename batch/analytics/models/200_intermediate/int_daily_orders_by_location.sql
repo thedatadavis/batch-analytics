@@ -3,7 +3,7 @@ with orders as (
 
     from {{ ref('stg_orders') }}
     
-    where is_exception is null
+    where is_excluded is false
 )
 
 , party_orders as (
