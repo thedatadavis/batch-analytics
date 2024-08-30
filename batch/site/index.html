@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-gray': '#282828',
+                        'custom-blue': '#2784a7',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-custom-gray text-white p-6">
+        <h1 class="text-3xl font-bold">Batch Analytics by Chris Davis</h1>
+    </header>
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4 text-custom-gray">Data Visualization</h2>
+                <p class="mb-4">Explore our interactive data visualizations and reports.</p>
+                <a href="/data/" class="inline-block bg-custom-blue text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">View Data</a>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4 text-custom-gray">Documentation</h2>
+                <p class="mb-4">Access comprehensive documentation for our data models and processes.</p>
+                <a href="/docs/" class="inline-block bg-custom-blue text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">View Docs</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-200 text-center p-4 mt-8">
+        <p>&copy; 2024 Chris for Batch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
