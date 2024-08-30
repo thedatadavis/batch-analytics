@@ -1,6 +1,6 @@
 ---
 title: Interesting Metrics
-sidebar_position: 11
+sidebar_position: 1
 ---
 
 ## Example
