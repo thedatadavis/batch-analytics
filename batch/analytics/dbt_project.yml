@@ -21,3 +21,19 @@ clean-targets:
 models:
   analytics:
     +materialized: table
+
+    000_sources:
+      +docs:
+        node_color: gray
+
+    100_staging:
+      +docs:
+        node_color: "#11823b"
+
+    200_intermediate:
+      +docs:
+        node_color: "#004d25"
+
+    500_marts:
+      +docs:
+        node_color: "#02231c"

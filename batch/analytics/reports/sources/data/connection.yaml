@@ -1,0 +1,5 @@
+# This file was automatically generated
+name: batch
+type: duckdb
+options:
+  filename: batch.duckdb
